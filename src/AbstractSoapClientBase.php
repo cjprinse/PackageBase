@@ -92,7 +92,7 @@ abstract class AbstractSoapClientBase implements SoapClientInterface
      */
     public function getSoapClientClassName($soapClientClassName = null)
     {
-        $className = self::DEFAULT_SOAP_CLIENT_CLASS;
+        $className = static::DEFAULT_SOAP_CLIENT_CLASS;
         if (!empty($soapClientClassName) && is_subclass_of($soapClientClassName, '\SoapClient')) {
             $className = $soapClientClassName;
         }
